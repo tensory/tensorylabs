@@ -1,19 +1,36 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.js"></script>
+	<link rel="stylesheet" type="text/css" href="../js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css" media="all" />
+	<script type="text/javascript">
+	(function($) {
+		$(function() {
+			$('.iframebox').fancybox({
+				'width': '75%',
+				'height': '75%',
+				'type': 'iframe'
+			});
+		});
+	})(jQuery);	
+	</script>
+</head>
 <body>
 	<dl class="thumbs">
-		<dt><img src="/thumbs/threedo.png"></dt>
+		<dt><a href="ThreeDo/index.html" class="iframebox"><img src="thumbs/threedo.png"></a></dt>
 		<dd>
 		<h3>ThreeDo</h3>
 		<p>I wrote this as a demo application using Backbone.js. It's got a few more rules than your basic to-do: tasks in the <em>To Do</em> column can't be dragged straight to <em>Done</em> without a stop in <em>In Progress</em>.</p>    
 		</dd>
-		<dt><img src="/thumbs/fop.png"></dt>
+		<dt><a href="jsfind/index.html" class="iframebox"><img src="thumbs/jsfind.png"></a></dt>
 		<dd>
-		<h3>Find On Page</h3>
+		<h3>JS Find</h3>
 		<p>Written as a mobile-friendly exercise, this toolbar emulates the <em>Find on Page...</em> tool in Firefox.</p>
 		</dd>
-		<dt><img src="/thumbs/flatbox.png"></dt>
+		<dt><a href="hatbox/samples/index.html" id="hatbox" class="iframebox"><img src="thumbs/hatbox.png"></a></dt>
 		<dd>
-		<h3>Flatbox</h3>
+		<h3>Hatbox</h3>
 		<p>Another exercise in JavaScript plugins made to be friendly to mobile devices: a simple image slideshow that cycles through all images on a page.</p>
 		<a href="#" class="source">github link</a>
 		</dd>
