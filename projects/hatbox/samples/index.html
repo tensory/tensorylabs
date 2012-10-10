@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body {
+	background-color: white;
+	font-size: 14px;
+	font-family: serif;
+	color: #666;
+}
+
+.wrap {
+	width: 90%;
+	margin: 2em auto;
+}
+
+p {
+	font-size: 1.6em;
+}
+
+p.attribution {
+	font-size: 1.2em;
+	font-style: italic;
+}
+
+#cta {
+	display: block;
+	padding: 0.5em;
+	background-color: #F8F8F8;
+	font-size: 1.8em;
+	font-style: italic;
+}
+
+img {
+	border: 5px solid white;
+	-webkit-box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 5px rgba(50, 50, 50, 0.75);
+	margin: 15px;
+}
+
+.right {
+	float: right;
+	clear: right;
+	margin: 0.5em 0 0.2em 0.8em; 
+}
+
+img.top {
+	margin-top: 0; 
+}
+
+img.bottom {
+	margin-bottom: 2em; 
+}
+
+.left {
+	float: left;
+	margin: 0.5em 0.8em 0.2em 0; 
+}
+</style>
+<link rel="stylesheet" href="../hatbox.css" type="text/css">
+<script src="../../../js/jquery.js"></script>
+<script src="../hatbox.js"></script>
+<script>
+(function() {
+	$(function() {
+		// Reset sizing on all document images
+		Optimize.resetImageSizing($('img'));
+
+		// Set up resize handlers for orientationchange events
+		Optimize.bindOrientation();
+		
+		Hatbox.init();
+	});
+})();
+</script>
+</head>
+<body>
+	<div class="wrap">
+	<p id="cta">Click or tap any image.</p>
+	<p><img src="0.jpg" class="left top">Aliquam ut orci nec nisl pretium porttitor sit amet in magna.</p><p><img src="4.jpg" class="right top"> Nulla tristique posuere dui, non sagittis purus blandit vitae.</p><p>Sed eget ligula vitae purus porta vulputate ac arcu. Fusce ac elit nulla. Sed mi felis, scelerisque posuere hendrerit quis, tempus vitae felis.</p> <p>Morbi vehicula molestie bibendum. Nunc iaculis, lorem vel facilisis feugiat, sapien ipsum ornare sapien, nec mollis metus lorem nec eros.</p><p>Fusce laoreet, arcu ut ornare tristique, felis nulla congue nunc, sit amet elementum turpis elit et est. Nunc aliquam lobortis molestie.</p><p><img src="2.jpg" class="right bottom">Etiam eu dui eu lectus mollis sagittis. Curabitur elementum erat at sem pretium viverra. Aliquam eros velit, dapibus at feugiat vitae, sollicitudin in purus.</p><p>Pellentesque id ligula metus. Ut dictum nibh eu eros pellentesque ut faucibus elit pretium.</p><p class="attribution">images: <a href="http://pinterest.com/anna_christina/diy/">pinterest</a><br/>text: <a href="http://www.lipsum.com">lorem ipsum</a></p>
+	</div>
+</body>
+</html>
