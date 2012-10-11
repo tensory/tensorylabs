@@ -11,14 +11,15 @@ body {
 #lists {
     margin: 0 auto;
     position: relative;
-    width: 1200px;
+    width: 90%;
+    min-width: 695px;
     box-sizing: border-box;
 }
 
 .list {
-    width: 390px;
+    width: 33.333333%;
     float: left;
-    margin-right: 10px;
+    clear: right;
 }
 
 .list h1 {
@@ -27,7 +28,8 @@ body {
     background-color: #aaa;
     color: #fff;
     padding: 8px 8px 8px 24px;
-    margin: 0;
+    margin: 0 10px 0 0;
+    min-width: 190px;
 }
 
 .list:last-of-type {
@@ -76,7 +78,8 @@ div.counter {
 }
 
 .header {
-    width: 1200px;
+    width: 90%;
+    min-width: 695px;
     margin: 0 auto;
     line-height: 70px;
     position: relative;
@@ -143,5 +146,6 @@ a.button {
 a.down {
     background-color: #444444;
 }
+
 
 
