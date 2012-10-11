@@ -8,32 +8,61 @@
 	(function($) {
 		$(function() {
 			$('.iframebox').fancybox({
-				'width': '75%',
-				'height': '75%',
+				'width': '70%',
+				'height': '80%',
+				'titleShow' : true,
 				'type': 'iframe'
 			});
 		});
 	})(jQuery);	
 	</script>
+	<style>
+	.thumb img {
+		width: 150px;
+		height: 150px;
+		border: 1px solid #EEEEEE;
+		margin-bottom: 2em;
+	}
+	
+	td.description {
+		vertical-align: top;
+	}
+	
+	td.description h3 {
+		margin-top: 0.1em;
+	}
+	</style>
 </head>
 <body>
-	<dl class="thumbs">
-		<dt><a href="ThreeDo/index.html" class="iframebox"><img src="thumbs/threedo.png"></a></dt>
-		<dd>
-		<h3>ThreeDo</h3>
-		<p>I wrote this as a demo application using Backbone.js. It's got a few more rules than your basic to-do: tasks in the <em>To Do</em> column can't be dragged straight to <em>Done</em> without a stop in <em>In Progress</em>.</p>    
-		</dd>
-		<dt><a href="jsfind/index.html" class="iframebox"><img src="thumbs/jsfind.png"></a></dt>
-		<dd>
-		<h3>JS Find</h3>
-		<p>Written as a mobile-friendly exercise, this toolbar emulates the <em>Find on Page...</em> tool in Firefox.</p>
-		</dd>
-		<dt><a href="hatbox/samples/index.html" id="hatbox" class="iframebox"><img src="thumbs/hatbox.png"></a></dt>
-		<dd>
-		<h3>Hatbox</h3>
-		<p>Another exercise in JavaScript plugins made to be friendly to mobile devices: a simple image slideshow that cycles through all images on a page.</p>
-		<a href="#" class="source">github link</a>
-		</dd>
-	</dl>
+	<table>
+		<tbody>
+		<tr>
+			<td class="thumb">
+				<a href="ThreeDo/index.html" class="iframebox" title="ThreeDo"><img src="thumbs/threedo.png"></a>
+			</td>
+			<td class="description">
+				<h3>ThreeDo</h3>
+				<p>I wrote this as a demo application using Backbone.js. It's got a few more rules than your basic to-do: tasks in the <em>To Do</em> column can't be dragged straight to <em>Done</em> without a stop in <em>In Progress</em>.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="thumb">
+				<a href="jsfind/index.html" class="iframebox" title="JS Find"><img src="thumbs/jsfind.png"></a>
+			</td>
+			<td class="description">
+			<h3>JS Find</h3>
+			<p>Written as a mobile-friendly exercise, this toolbar emulates the <em>Find on Page...</em> tool in Firefox.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="thumb"><a href="hatbox/samples/index.html" class="iframebox" title="Hatbox"><img src="thumbs/hatbox.png" title="Hatbox"></a></td>
+			<td class="description">
+			<h3>Hatbox<span class="subtitle">(a mobile image lightbox)</span></h3>
+			<p>Another exercise in JavaScript plugins made to be friendly to mobile devices: a simple image slideshow that cycles through all images on a page.</p>
+			<a href="#" class="source">github link</a>
+			</td>
+		</tr>
+		</tbody>
+	</table>
 </body>
 </html>
