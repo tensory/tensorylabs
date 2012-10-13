@@ -14,7 +14,8 @@
 				'titleShow' : true,
 				'titlePosition' : 'inside',
 				'type': 'iframe',
-				'transition': 'none'
+				'transitionOut': 'none',
+				'overlayOpacity'	: 0.5
 			};
 			
 			$('.iframebox').fancybox(fancyboxSettings);
@@ -29,13 +30,39 @@
 		margin: 0;
 	}
 	
+	a {
+		color: #666;
+	}
+	/* Colors */
+	/*
+		FA560A: paprikash
+		FA6900: unreal food pills
+	*/
+	
+	a:hover {
+		color: #FA6900;
+	}
+	
 	#header {
 		width: 78%;
-		margin: 2em auto 2em;
+		margin: 0 auto;
+		padding: 2em 3em; 
 	}
 	#lede {
 		font-family: 'Asap', sans-serif;
 		font-size: 1.428571em;
+	}
+	
+	#nav {
+		margin: 0 0 2.8em;
+		padding: 0;
+	}
+	
+	#nav li {
+		display: inline;
+		font-size: 1em;
+		font-family: 'Asap', sans-serif;
+		margin-right: 1.8em;
 	}
 	
 	h2 {
@@ -46,7 +73,7 @@
 		margin-bottom: 2em;
 	}
 	#color {
-		display: none;
+		margin: 0 auto;
 		width: 100%;
 		height: 1.2em;
 		background-color: #FC3607;
@@ -55,7 +82,7 @@
 		width: 78%;
 		margin: 0 auto;
 		background-color: white;
-		padding: 2em 3em; 
+		padding: 2.8em 3em; 
 	}
 	
 	table.projects {
@@ -101,13 +128,21 @@
 			<div id="header">
 				<span id="lede">
 				ari lacenski <span style="opacity: 0.5">builds software & makes magic</span>
-				</span>
+				<ul id="icons">
+					<li><a href="http://www.twitter.com/tensory" class="twitter"></a></li>
+					<li><a href="http://www.github.com/tensory" class="github"></a></li>
+					<li><a href="mailto:alacenski@gmail.com" class="email"></a></li>	
+				</ul>
 			</div>
 		</header>	
-	
 	<div id="wrap">
-		<div id="color">&nbsp;</div>
-	<h2>Recent Projects</h2>
+	<nav>
+		<ul id="nav">
+			<li><a href="/projects">Projects</a></li>
+			<li><a href="/">About</a></li>
+		</ul>
+	</nav>
+	
 	<table class="projects">
 		<tbody>
 		<tr>
