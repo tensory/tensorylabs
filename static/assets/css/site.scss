@@ -1,0 +1,198 @@
+/* Colors */
+$satan: #666;
+$palest: #FBFBFB;
+$paprikash: #FA560A;
+$unrealfoodpills: #FA6900;
+
+/* Type */
+$font-asap: 'Asap', 'Helvetica', sans-serif;
+
+/* Paths */
+$icons: '../icons/';
+
+body {
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.4em;
+	background-color: $palest;
+	margin: 0;
+}
+	
+a {
+	color: $satan;
+}
+
+a:hover {
+	color: $unrealfoodpills;
+}
+
+#header {
+	position: relative;
+	width: 78%;
+	margin: 0 auto;
+	padding: 2em 3em; 
+}
+
+#lede {
+	display: block;	
+	font-family: $font-asap;
+	font-size: 1.428571em;
+	line-height: 1.2em;
+	max-width: 72%;
+}
+
+#social {
+	position: absolute;
+	right: 0;
+	margin: 0;
+	top: 1em;
+	line-height: 36px;
+	margin-left: 1em;
+	margin-right: 0.4em;
+	
+	li {
+		display: inline-block;
+		padding: 0;
+		margin: 0 0.4em 0 0;
+	}
+	
+	a {
+		$iconsize: 36px;
+		display: inline-block;
+		width: $iconsize;
+		height: $iconsize;
+		background-position: 0px 0px;
+		background-size: 100%; 
+		background-repeat: no-repeat;
+	}
+	
+	a.github {
+		background-image: url(../icons/github.png);
+		   
+	}
+	
+	a:hover.github {
+		background-image: url(../icons/github-orange.png);
+	}
+
+	a.contact {
+		background-image: url(../icons/contact.png);
+		   
+	}
+	
+	a:hover.contact {
+		background-image: url(../icons/contact-orange.png);
+	}
+
+	a.twitter {
+		background-image: url(../icons/twitter.png);		   
+	}
+	
+	a:hover.twitter {
+		background-image: url(../icons/twitter-orange.png);
+	}
+}
+
+#nav {
+	margin: 0 0 2.8em -6px;
+	padding: 0;
+	
+	li {
+		display: inline;
+		font-size: 1em;
+		font-family: $font-asap;
+		margin-right: 1.8em; 
+		
+		a {
+			padding: 6px;
+		}
+		
+		a.current {
+			background-color: #FCFCFC;
+			border-top: 1px solid #DDD;
+		}
+	}	
+}
+
+h2, h3 {
+	font-family: $font-asap;
+}
+
+h2 {
+	font-size: 1.8em;
+	margin-top: 0.1em;
+	line-height: 1em;
+	margin-bottom: 0;
+}
+
+h3 {
+	font-size: 1.4em;
+}
+
+#wrap {
+	width: 78%;
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: white;
+	padding: 2.8em 3em 2em; 
+}
+
+ol {
+	line-height: 1.6em;
+}
+#colophon {
+	width: 78%;
+	margin: 0 auto;
+	padding: 2em 3em 2.8em;
+	font-size: 1em;
+	line-height: 0.857142em;
+	/* This works in IE 8 & 9 too */
+	/* ... but also 5, 6, 7 */
+	filter: alpha(opacity=70);
+	
+	opacity: 0.7;
+	-moz-opacity: 0.7
+	
+	a {
+		color: #000000;
+	}
+	
+	a:hover {
+		color: #333;
+	}  
+}
+
+table.projects {
+	border-color: none;
+	border-collapse: collapse;
+}
+
+.thumb img {
+	width: 150px;
+	height: 150px;
+	border: 1px solid #DDD;
+	margin-bottom: 3em;
+}
+
+td.description {
+	vertical-align: top;
+	padding-left: 1.4em;
+}
+
+td.description h3 {
+	font-family: $font-asap;
+	font-size: 1.8em;
+	margin-top: 0.1em;
+	line-height: 1em;
+	margin-bottom: 0;
+	.subtitle {
+		display: block;
+		font-size: 0.6em;
+	}
+}
+
+/* Custom styles for Fancybox */
+#fancybox-title-inside {
+	font-weight: bold;
+	margin-top: 0.1em;
+}

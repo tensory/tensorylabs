@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.js') }}"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css') }}" media="all" />
+	<link href="http://fonts.googleapis.com/css?family=Asap:100,400,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+	<link href="{{ url_for('static', filename='assets/css/site.css') }}" rel="stylesheet type="text/css">
+	<script type="text/javascript">
+	(function($) {
+		$(function() {
+			var fancyboxSettings = {
+				'width': '90%',
+				'height': '80%',
+				'titleShow' : true,
+				'titlePosition' : 'inside',
+				'type': 'iframe',
+				'transitionOut': 'none',
+				'overlayOpacity'	: 0.5
+			};
+			
+			$('.iframebox').fancybox(fancyboxSettings);
+		});
+	})(jQuery);	
+	</script>
+</head>
+<body>
+		<header>
+			<div id="header">
+				<span id="lede">
+				ari lacenski <span style="opacity: 0.5">builds&nbsp;software &&nbsp;makes&nbsp;magic</span>
+				<ul id="social">
+					<li><a href="http://www.twitter.com/tensory" class="twitter" target="_blank"></a></li>
+					<li><a href="http://www.github.com/tensory" class="github" target="_blank"></a></li>
+					<li><a href="mailto:alacenski@gmail.com" class="contact"></a></li>	
+				</ul>
+			</div>
+		</header>	
+	<div id="wrap">
+	<nav>
+		<ul id="nav">
+			<li><a href="/projects" >Projects</a></li>
+			<li><a href="/" class="current">About</a></li>
+		</ul>
+	</nav>
+	{% block content %}
+	{% endblock %}
+	</div>
+	<div id="colophon">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC BY-SA</a> 2012, Ari Lacenski</p>
+		<p>Icons by <a href="http://icomoon.io/">Keyamoon</a> | <a href="http://fancybox.net/">Fancybox2</a></p>
+	</div>
+	
+	{% block scripts %}
+	{% endblock %}
+</body>
+</html>
