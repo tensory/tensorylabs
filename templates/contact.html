@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<form action="/contact/" method="POST">
+		<div>{{ form.sender.label }}: {{ form.sender() }}</div>
+		<div>{{ form.email_address.label }}: {{ form.email_address() }}</div>
+		<div>{{ form.message.label }}: {{ form.message() }}</div>
+		<div>{{ form.submit() }}</div>
+
+	</form> 	 	 	
+{% endblock %}
