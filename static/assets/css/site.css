@@ -93,7 +93,9 @@ h3 {
   padding: 2.8em 3em 2em; }
 
 ol {
-  line-height: 1.6em; }
+  line-height: 1.2em; }
+  ol li {
+    margin-bottom: 0.8em; }
 
 #colophon {
   width: 78%;
