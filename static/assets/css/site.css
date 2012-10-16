@@ -1,6 +1,5 @@
 /* Colors */
 /* Type */
-/* Paths */
 body {
   font-family: 'Droid Sans', sans-serif;
   font-size: 14px;
@@ -17,6 +16,7 @@ a:hover {
 #header {
   position: relative;
   width: 78%;
+  max-width: 960px;
   margin: 0 auto;
   padding: 2em 3em; }
 
@@ -99,6 +99,7 @@ ol {
 
 #colophon {
   width: 78%;
+  max-width: 960px;
   margin: 0 auto;
   padding: 2em 3em 2.8em;
   font-size: 1em;

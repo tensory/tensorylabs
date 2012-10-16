@@ -7,8 +7,7 @@ $unrealfoodpills: #FA6900;
 /* Type */
 $font-asap: 'Asap', 'Helvetica', sans-serif;
 
-/* Paths */
-$icons: '../icons/';
+$max-width: 960px; 
 
 body {
 	font-family: 'Droid Sans', sans-serif;
@@ -29,6 +28,7 @@ a:hover {
 #header {
 	position: relative;
 	width: 78%;
+	max-width: $max-width;
 	margin: 0 auto;
 	padding: 2em 3em; 
 }
@@ -131,7 +131,7 @@ h3 {
 
 #wrap {
 	width: 78%;
-	max-width: 960px;
+	max-width: $max-width;
 	margin: 0 auto;
 	background-color: white;
 	padding: 2.8em 3em 2em; 
@@ -146,6 +146,7 @@ ol {
 
 #colophon {
 	width: 78%;
+	max-width: $max-width;
 	margin: 0 auto;
 	padding: 2em 3em 2.8em;
 	font-size: 1em;
