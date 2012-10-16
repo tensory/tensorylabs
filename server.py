@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 from flask import Flask, render_template, request
-from flask.ext.sendmail import Mail
+from flask.ext.sendmail import Mail, Message
 
 from contact_form import ContactForm
 
 app = Flask(__name__)
-
+mail = Mail(app)
 
 @app.route('/')
 def index():
@@ -19,8 +19,15 @@ def projects():
 def contact():
 	form = ContactForm(request.form)
 	if request.method == 'POST':
-		# Send email
-		pass		
+		if form.validate():
+			pass
+		'''
+			msg = Message("Subject", sender=(request.form.sender, request.form.email_address))
+			msg.body = request.form.message
+			# Send email
+			mail.send(msg)
+		'''
+					
 	return render_template('contact.html', form=form)
 	
 def display(pagename):
