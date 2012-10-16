@@ -22,8 +22,8 @@
 	<div id="wrap">
 	<nav>
 		<ul id="nav">
-			<li><a href="/projects" >Projects</a></li>
-			<li><a href="/" class="current">About</a></li>
+			<li><a href="/projects" {% if current == 'projects' %}class="current"{% endif %}>Projects</a></li>
+			<li><a href="/" {% if current == 'about' %}class="current"{% endif %}>About</a></li>
 		</ul>
 	</nav>
 	{% block content %}
