@@ -97,6 +97,8 @@ ol {
   margin-bottom: 2em; }
   ol li {
     margin-bottom: 0.8em; }
+  ol p {
+    line-height: 0.8em; }
 
 #colophon {
   width: 78%;

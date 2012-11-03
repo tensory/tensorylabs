@@ -45,7 +45,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #findOnPage {
-	display: none;
 	position: relative;
 	border-bottom: 1px #777;
 	height: 60px;

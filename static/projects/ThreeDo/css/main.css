@@ -4,6 +4,7 @@ html, body {
 
 body {
     background-color: #bbb;
+    background-image: url('images/noisebg.png/');
     font-family: 'Helvetica Neue', 'Helvetica', 'sans-serif';
     font-size: 14px;
 }
@@ -17,7 +18,7 @@ body {
 }
 
 .list {
-    width: 33.333333%;
+    width: 272px;
     float: left;
     clear: right;
 }
@@ -42,6 +43,9 @@ body {
     padding: 0;
     list-style-type: none;
     background-color: #bbb;
+    background-image: url('images/noisebg.png/');
+    width: 262px;
+    overflow: hidden;
 }
 
 .list ul.ui-droppable {
@@ -50,7 +54,7 @@ body {
 
 .list ul li {
     line-height: 60px;
-    width: 366px;
+    width: 252px;
     background-color: #FFFFFF;
     color: #777;
     font-weight: 200;
@@ -96,6 +100,7 @@ div.counter {
 div.counter span {
     display: block;
 }
+
 div.counter .numeral {
     font-size: 1.142857em; /* 16 / 14 */
     line-height: 1.2em;
@@ -123,7 +128,7 @@ input {
     width: 200px;
     outline: 0;
     margin-left: 4px;
-    padding-left: 2px;
+    padding-left: 4px;
     border: 1px solid #888;
 }
 input.error {
