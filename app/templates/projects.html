@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<table class="projects">
+	<tbody>
+		<tr>
+			<td class="thumb">
+				<a href="{{ url_for('static', filename='projects/ThreeDo/index.html') }}" class="iframebox" title="ThreeDo"><img src="{{ url_for('static', filename='projects/thumbs/threedo.png') }}"></a>
+			</td>
+			<td class="description">
+				<h3>ThreeDo</h3>
+				<p>I wrote this as a demo application using Backbone.js. It's got a few more rules than your basic to-do: tasks in the <em>To Do</em> column can't be dragged straight to <em>Done</em> without a stop in <em>In Progress</em>.</p>
+				<a href="https://github.com/tensory/ThreeDo/" class="source">source</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="thumb">
+				<a href="{{ url_for('static', filename='projects/jsfind/index.html') }}" class="iframebox" title="JS Find"><img src="{{ url_for('static', filename='projects/thumbs/jsfind.png') }}"></a>
+			</td>
+			<td class="description">
+			<h3>JS Find</h3>
+			<p>Written as a mobile-friendly exercise, this toolbar emulates the <em>Find on Page...</em> tool in Firefox.</p>
+			<a href="https://github.com/tensory/wikimedia/" class="source">source</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="thumb"><a href="{{ url_for('static', filename='projects/hatbox/samples/index.html') }}" class="iframebox" title="Hatbox"><img src="{{ url_for('static', filename='projects/thumbs/hatbox.png') }}" title="Hatbox"></a></td>
+			<td class="description">
+			<h3>Hatbox<span class="subtitle">(a mobile image lightbox)</span></h3>
+			<p>Another exercise in JavaScript plugins made to be friendly to mobile devices: a simple image slideshow that cycles through all images on a page.</p>
+			<a href="https://github.com/tensory/wikimedia/" class="source">source</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.js') }}"></script>
+<script type="text/javascript">
+	(function($) {
+		$(function() {
+			var fancyboxSettings = {
+				'width': '90%',
+				'height': '80%',
+				'titleShow' : true,
+				'titlePosition' : 'inside',
+				'type': 'iframe',
+				'transitionOut': 'none',
+				'overlayOpacity'	: 0.5
+			};
+			
+			$('.iframebox').fancybox(fancyboxSettings);
+		});
+	})(jQuery);	
+</script>
+{% endblock %}

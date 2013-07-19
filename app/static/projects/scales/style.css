@@ -1,0 +1,159 @@
+body {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+#wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.message {
+    display: none;
+}
+
+#lolwut .attribution {
+    zoom: 1;
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+}
+
+#lolwut .attribution a {
+    color: black;
+}
+.note-name {
+    font-size: 2em;
+    letter-spacing: -2px;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    position: absolute;
+    text-align: center;
+    margin: 0;
+}
+
+.note-name + .pressed,
+#c.pressed {
+    color: rgba(0, 0, 0, 1.0);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#current {
+    display: block;
+    font-size: 2.5em;
+}
+
+#wheel {
+    font-family: serif;
+}
+
+#controls {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+button {
+    height: 40px;
+    font-size: 2em;
+    width: auto;
+    display: inline-block;
+    margin: 0 3px;
+
+}
+
+#yeah {
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.247059);
+    display: none;
+    background: #da4f49; /* Old browsers */
+    background: -moz-linear-gradient(top, #da4f49 0%, #d87470 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#da4f49), color-stop(100%,#d87470)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #da4f49 0%,#d87470 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #da4f49 0%,#d87470 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #da4f49 0%,#d87470 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #da4f49 0%,#d87470 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#da4f49', endColorstr='#d87470',GradientType=0 ); /* IE6-9 */
+}
+
+h1 {
+    font-size: 3em;
+    width: 400px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#lolwut a, #colophon a {
+    color: #666666;
+}
+
+#lolwut a:hover {
+    color: #FA560A;
+}
+
+#colophon a:hover {
+    color: #999;
+}
+
+#buttons {
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+#container {
+    position: relative;
+    width: 400px;
+    margin-top: 0;
+    float: left;
+}
+
+#results {
+    margin-top: 0;
+    padding-top: 4em;
+    margin-left: 420px;
+}
+
+#related {
+    font-size: 1.2em;
+    margin-top: 0.8em;
+}
+
+#scale {
+    display: none;
+    width: 340px;
+}
+
+#scales ul {
+    list-style-type: none;
+    padding-left: 1.6em;
+    margin-top: 0.2em;
+}
+
+#scales ul li {
+    padding: 0.1em 0;
+}
+
+#lolwut {
+    clear: both;
+    background-color: #EFEFEF;
+    padding: 0.8em 1.6em;
+    border-radius: 12px;
+}
+
+.troll img {
+    width: 350px;
+}
+
+#colophon {
+    text-align: center;
+    margin: 1.8em 0;
+    font-size: 0.8em;
+    color: #AAAAAA;
+}
+
+#graphic {
+    display: none;
+}
