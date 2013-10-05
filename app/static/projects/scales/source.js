@@ -55,9 +55,16 @@ $.fn.extend({
         $('#scale').show();
     }
 });
+var trollBeat, yeahEffect;
+var staticFilePath = '';
+function getStaticFilePath() {
+	return staticFilePath;
+}
 
-var trollBeat = new buzz.sound('files/156370__thecluegeek__techno-beat.wav', { loop: true });
-var yeahEffect = new buzz.sound('files/86099__donthemagicwon__yeah.wav', { loop: false });
+function initStaticFiles(path) {
+	trollBeat = new buzz.sound(getStaticFilePath() + 'files/156370__thecluegeek__techno-beat.wav', { loop: true });
+	yeahEffect = new buzz.sound(getStaticFilePath() + 'files/86099__donthemagicwon__yeah.wav', { loop: false });
+}
 
 var Scale = function(cycle, root, subtype, type) {
     this.root = root;
@@ -99,7 +106,7 @@ Staff = (function() {
     };
 
     var staff = {};
-
+    
     staff.getKeySignature = function(name) {
         var keySignatures = {
             'a harmonic minor': ['♯', 1],
@@ -177,7 +184,7 @@ Staff = (function() {
                 var scaling = Staff.scaleVector(clef, 35);
                 ctx.drawImage(clef, 0, 8, scaling.width, scaling.height);
             };
-            clef.src = 'svg/g_clef.svg';
+            clef.src = getStaticFilePath() + 'svg/g_clef.svg';
         },
         render: function(id, name, scale) {
             var ctx = staff.ctx;
@@ -271,7 +278,7 @@ Staff = (function() {
                     ctx.drawImage(whole, xOrigin + (count * xSpacing), y, noteSize.width, noteSize.height);
                 });
             };
-            whole.src = 'svg/whole_note.svg';e
+            whole.src = getStaticFilePath() + 'svg/whole_note.svg';e
         },
 
         // To draw notes in tonic order,
@@ -316,9 +323,10 @@ Staff = (function() {
                 }
             }
         },
-        init: function(id) {
+        init: function(id, staticFilePath) {
             staff.element = document.getElementById(id);
             staff.ctx = staff.element.getContext('2d');
+            
         },
         clear: function() {
             staff.ctx.clearRect(0, 0, staff.element.width, staff.element.height);
@@ -558,10 +566,11 @@ Wheel = (function($) {
             LABEL_RADIUS: 150,
             ARC_LENGTH: Math.PI / (_.size(Cycle.toneMap) / 2), // One-nth of the circle
             SIZE: 400
-        };
+        },
+        filePath;
 
     return {
-        init: function(id) {
+        init: function(id, filepath) {
             canvas = document.getElementById(id);
             canvas.width = properties.SIZE;
             canvas.height = properties.SIZE;
@@ -569,6 +578,7 @@ Wheel = (function($) {
                 X: canvas.width / 2,
                 Y: canvas.height / 2
             });
+            filePath = filepath;
         },
         draw: function(colors) {
             colors = colors || [];

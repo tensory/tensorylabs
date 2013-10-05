@@ -1,14 +1,13 @@
 <!doctype html>
 <html>
 <head>
-	{% set STATIC_URL = "projects/scales/" %}
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename=STATIC_URL + "animate-custom.css") }}" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename=STATIC_URL + "style.css") }}" />
-    <script src="{{ url_for('static', filename=STATIC_URL + "jquery-1.8.3.min.js") }}"></script>
-    <script src="{{ url_for('static', filename=STATIC_URL + "underscore-min.js") }}"></script>
-    <script src="{{ url_for('static', filename=STATIC_URL + "buzz.js") }}"></script>
-    <script src="{{ url_for('static', filename=STATIC_URL + "source.js") }}"></script>
+    <link rel="stylesheet" type="text/css" href="animate-custom.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="buzz.js"></script>
+    <script src="source.js"></script>
     <script>
         $(document).ready(function() {
             Wheel.init('wheel');
@@ -46,7 +45,7 @@
 </head>
 <body>
 <div id="wrap">
-<h1>Superpeggio!</h1>
+<h1>superpeggio!</h1>
 <div id="container" style="position: relative;">
     <canvas id="wheel" class="animated"></canvas>
     <div id="buttons"></div>
@@ -59,8 +58,8 @@
     <div id="current"></div>
     <div id="related">
         <div class="message troll">
-            <img src="{{ url_for('static', filename=STATIC_URL + "tumblr_lrldh5nJvh1qcit8q.gif") }}"/></div>
-        <div class="message none">That's not part of any scale...<br><b>but keep going!</b></div>
+            <img src="tumblr_lrldh5nJvh1qcit8q.gif"/></div>
+        <div class="message none">That's not part of any scale :(</div>
         <div class="message memberships">Now you can make</div>
         <div id="scales">
         </div>
@@ -68,12 +67,10 @@
     </div>
     <canvas id="graphic"></canvas>
 </div>
-<h1 style="margin-left: 1em;">Click some buttons! :D</h1>
-	
 <div id="lolwut">
     <h2>What's this, then?</h2>
     <p>Click a few notes to learn the musical scales they produce.</p>
-    <p>This tone wheel is not a <a href="http://en.wikipedia.org/wiki/Circle_of_fifths">circle of fifths</a>. It's just the chromatic sequence. It'll tell you the keys that you can build with a handful of notes, but this doesn't give you any of the extra clues about key signature or interval that you get from the traditional circle. I'm using <a href="http://www.circle-of-fifths.net/learn.html" target="_blank">Jan's Circle of Fifths</a> (Flash) to teach myself how that all works.</p>
+    <p>It is <strong>not</strong> a <a href="http://en.wikipedia.org/wiki/Circle_of_fifths">circle of fifths</a>. It's just the chromatic sequence. It'll tell you the keys that you can build with a handful of notes, but this doesn't give you any of the extra clues about key signature or interval that you get from the traditional circle. I'm using <a href="http://www.circle-of-fifths.net/learn.html" target="_blank">Jan's Circle of Fifths</a> (Flash) to teach myself how that all works.</p>
     <p>Superpeggio knows about the <a href="http://en.wikipedia.org/wiki/Major_scale">major scales</a> and the <a href="http://en.wikipedia.org/wiki/Minor_scale">natural, harmonic, and melodic minors</a>.</p>
     <p>If you have any suggestions for making this better, you could <a href="http://www.arilacenski.com/about/">email me</a>, but it would be much cooler if you sent me a pull request on <a href="https://github.com/tensory/firmataphone">Github</a>.</p>
     <p class="attribution">Thanks! <a href="http://github.com/neilk">neilk</a>, <a href="http://freesound.org/people/thecluegeek/sounds/156370/">theclubgeek</a>, <a href="http://dirkgrayson.tumblr.com/">dirkgrayson</a>, <a href="http://www.freesound.org/people/donthemagicwon/sounds/86099/">donthemagicwon</a></p>
