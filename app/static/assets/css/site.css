@@ -1,149 +1,277 @@
 /* Colors */
+/* Dimensions */
 /* Type */
 body {
-  font-family: 'Droid Sans', sans-serif;
-  font-size: 14px;
-  line-height: 1.4em;
-  background-color: #fbfbfb;
-  margin: 0; }
-
-a {
-  color: #666666; }
-
-a:hover {
-  color: #fa6900; }
+  width: 100%;
+  margin: 0;
+  background-color: white; }
 
 #header {
-  position: relative;
-  width: 78%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2em 3em; }
+  width: 100%;
+  height: 64px;
+  background-color: #001E57;
+  padding: 0 20px; }
 
-#lede {
-  display: block;
-  font-family: "Asap", "Helvetica", sans-serif;
-  font-size: 1.428571em;
-  line-height: 1.2em;
-  max-width: 72%; }
+#header-wrap {
+  /* Override in media queries */
+  position: relative; }
 
 #social {
   position: absolute;
-  right: 0;
+  right: 20px;
   margin: 0;
-  top: 1em;
-  line-height: 36px;
-  margin-left: 1em;
-  margin-right: 0.4em; }
+  top: 0;
+  height: 64px; }
   #social li {
     display: inline-block;
     padding: 0;
-    margin: 0 0.4em 0 0; }
-  #social a {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    background-position: 0px 0px;
-    background-size: 100%;
-    background-repeat: no-repeat; }
-  #social a.github {
-    background-image: url(../icons/github.png); }
-  #social a:hover.github {
-    background-image: url(../icons/github-orange.png); }
-  #social a.contact {
-    background-image: url(../icons/contact.png); }
-  #social a:hover.contact {
-    background-image: url(../icons/contact-orange.png); }
-  #social a.twitter {
-    background-image: url(../icons/twitter.png); }
-  #social a:hover.twitter {
-    background-image: url(../icons/twitter-orange.png); }
+    width: 40px;
+    margin: 12px 16px 0 0; }
+    #social li a {
+      display: block;
+      height: 40px;
+      background-image: url(../icons/sprts.png); }
+    #social li a.twitter {
+      background-position: 120px 0px; }
+    #social li a.github {
+      background-position: 40px 0px; }
+  #social:first-child {
+    margin: 12px 10px 0 0; }
+
+#lede {
+  line-height: 64px;
+  color: white;
+  font-size: 40px;
+  position: relative;
+  font-family: 'PT Sans', 'Helvetica', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); }
+
+/* media queries 
+http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #lede {
+    font-size: 32px; } }
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+  #social {
+    display: none; } }
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+  #social {
+    display: block; }
+    #social li {
+      height: 32px;
+      width: 32px;
+      margin-top: 16px;
+      margin-right: 12px; }
+      #social li a {
+        display: block;
+        height: 32px;
+        background-image: url(../icons/sprites-32.png); }
+      #social li a.twitter {
+        background-position: 96px 0px; }
+      #social li a.github {
+        background-position: 32px 0px; } }
+/* OOOLLLLD */
+	/*
+body {
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.4em;
+	background-color: $palest;
+	margin: 0;
+}
+	
+a {
+	color: $satan;
+}
+
+a:hover {
+	color: $unrealfoodpills;
+}
+
+#header {
+	position: relative;
+	width: 78%;
+	max-width: $max-width;
+	margin: 0 auto;
+	padding: 2em 3em; 
+}
+
+#lede {
+	display: block;	
+	font-family: $font-asap;
+	font-size: 1.428571em;
+	line-height: 1.2em;
+	max-width: 72%;
+}
+
+#social {
+	position: absolute;
+	right: 0;
+	margin: 0;
+	top: 1em;
+	line-height: 36px;
+	margin-left: 1em;
+	margin-right: 0.4em;
+	
+	li {
+		display: inline-block;
+		padding: 0;
+		margin: 0 0.4em 0 0;
+	}
+	
+	a {
+		$iconsize: 36px;
+		display: inline-block;
+		width: $iconsize;
+		height: $iconsize;
+		background-position: 0px 0px;
+		background-size: 100%; 
+		background-repeat: no-repeat;
+	}
+	
+	a.github {
+		background-image: url(../icons/github.png);
+		   
+	}
+	
+	a:hover.github {
+		background-image: url(../icons/github-orange.png);
+	}
+
+	a.contact {
+		background-image: url(../icons/contact.png);
+		   
+	}
+	
+	a:hover.contact {
+		background-image: url(../icons/contact-orange.png);
+	}
+
+	a.twitter {
+		background-image: url(../icons/twitter.png);		   
+	}
+	
+	a:hover.twitter {
+		background-image: url(../icons/twitter-orange.png);
+	}
+}
 
 #nav {
-  margin: 0 0 2.8em -6px;
-  padding: 0; }
-  #nav li {
-    display: inline;
-    font-size: 1em;
-    font-family: "Asap", "Helvetica", sans-serif;
-    margin-right: 1.8em; }
-    #nav li a {
-      padding: 6px; }
-    #nav li a.current {
-      background-color: #FCFCFC;
-      border-top: 1px solid #DDD; }
+	margin: 0 0 2.8em -6px;
+	padding: 0;
+	
+	li {
+		display: inline;
+		font-size: 1em;
+		font-family: $font-asap;
+		margin-right: 1.8em; 
+		
+		a {
+			padding: 6px;
+		}
+		
+		a.current {
+			background-color: #FCFCFC;
+			border-top: 1px solid #DDD;
+		}
+	}	
+}
 
 h2, h3 {
-  font-family: "Asap", "Helvetica", sans-serif; }
+	font-family: $font-asap;
+}
 
 h2 {
-  font-size: 1.8em;
-  margin-top: 0.1em;
-  line-height: 1em;
-  margin-bottom: 0; }
+	font-size: 1.8em;
+	margin-top: 0.1em;
+	line-height: 1em;
+	margin-bottom: 0;
+}
 
 h3 {
-  font-size: 1.4em; }
+	font-size: 1.4em;
+}
 
 #wrap {
-  width: 78%;
-  max-width: 960px;
-  margin: 0 auto;
-  background-color: white;
-  padding: 2.8em 3em 2em; }
+	width: 78%;
+	max-width: $max-width;
+	margin: 0 auto;
+	background-color: white;
+	padding: 2.8em 3em 2em; 
+}
 
 ol {
-  line-height: 1.2em;
-  margin-bottom: 2em; }
-  ol li {
-    margin-bottom: 0.8em; }
-  ol p {
-    margin-bottom: 0.5em; }
-  ol li:last-child {
-    margin-bottom: 0.8em;
-  }
+	line-height: 1.2em;	
+	margin-bottom: 2em; 
+
+	li {
+		margin-bottom: 0.8em;
+	}
+	
+	p {
+		line-height: 0.8em;
+	}
+}
 
 #colophon {
-  width: 78%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2em 3em 2.8em;
-  font-size: 1em;
-  line-height: 0.857142em;
-  /* This works in IE 8 & 9 too */
-  /* ... but also 5, 6, 7 */
-  filter: alpha(opacity=70);
-  opacity: 0.7;
-  -moz-opacity: 0.7 a;
-    -moz-opacity-color: #000000; }
-  #colophon a:hover {
-    color: #333; }
+	width: 78%;
+	max-width: $max-width;
+	margin: 0 auto;
+	padding: 2em 3em 2.8em;
+	font-size: 1em;
+	line-height: 0.857142em;
+	/* This works in IE 8 & 9 too */
+/* ... but also 5, 6, 7 */
+/*
+	filter: alpha(opacity=70);
+	
+	opacity: 0.7;
+	-moz-opacity: 0.7
+	
+	a {
+		color: #000000;
+	}
+	
+	a:hover {
+		color: #333;
+	}  
+}
 
 table.projects {
-  border-color: none;
-  border-collapse: collapse; }
+	border-color: none;
+	border-collapse: collapse;
+}
 
 .thumb img {
-  width: 150px;
-  height: 150px;
-  border: 1px solid #DDD;
-  margin-bottom: 3em; }
+	width: 150px;
+	height: 150px;
+	border: 1px solid #DDD;
+	margin-bottom: 3em;
+}
 
 td.description {
-  vertical-align: top;
-  padding-left: 1.4em; }
+	vertical-align: top;
+	padding-left: 1.4em;
+}
 
 td.description h3 {
-  font-family: "Asap", "Helvetica", sans-serif;
-  font-size: 1.8em;
-  margin-top: 0.1em;
-  line-height: 1em;
-  margin-bottom: 0; }
-  td.description h3 .subtitle {
-    display: block;
-    font-size: 0.6em; }
+	font-family: $font-asap;
+	font-size: 1.8em;
+	margin-top: 0.1em;
+	line-height: 1em;
+	margin-bottom: 0;
+	.subtitle {
+		display: block;
+		font-size: 0.6em;
+	}
+}
 
 /* Custom styles for Fancybox */
+/*
 #fancybox-title-inside {
-  font-weight: bold;
-  margin-top: 0.1em; }
+	font-weight: bold;
+	margin-top: 0.1em;
+}
+*/
