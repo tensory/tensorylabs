@@ -30,7 +30,7 @@ body {
     #social li a {
       display: block;
       height: 40px;
-      background-image: url(../icons/sprts.png); }
+      background-image: url(../icons/sprites-40.png); }
     #social li a.twitter {
       background-position: 120px 0px; }
     #social li a.github {
