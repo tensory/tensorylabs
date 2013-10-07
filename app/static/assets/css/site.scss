@@ -1,7 +1,8 @@
 /* Colors */
 $white: #FFFFFF;
-
-
+$light-grey: #D6D6D6;
+$lapis-blue: #001E57;
+	
 $satan: #666;
 $palest: #FBFBFB;
 $paprikash: #FA560A;
@@ -9,6 +10,7 @@ $unrealfoodpills: #FA6900;
 
 /* Dimensions */
 $header-height: 64px;
+$standard-padding: 20px;
 
 /* Type */
 $font-pt-sans: 'PT Sans', 'Helvetica', sans-serif;
@@ -17,13 +19,20 @@ body {
 	width: 100%;
 	margin: 0;
 	background-color: $white;
+	font-size: 14px;
+	background: $light-grey url('../21_42.png') repeat 0 0;
 }
 
 #header {
 	width: 100%;
 	height: $header-height;
-	background-color: #001E57;
-	padding: 0 20px;
+	background-color: $lapis-blue;
+	padding: 0 $standard-padding;
+	
+	a {
+		text-decoration: none;
+		color: $white;
+	}
 }
 
 #header-wrap {
@@ -33,7 +42,7 @@ body {
 
 #social {
 	position: absolute;
-	right: 20px;
+	right: $standard-padding;
 	margin: 0;
 	top: 0;
 	height: $header-height;
@@ -48,7 +57,7 @@ body {
 		a {
 			display: block;
 			height: 40px;
-			background-image: url(../icons/sprites-40.png);
+			background-image: url('../icons/sprites-40.png');
 		}
 		
 		a.twitter {
@@ -63,8 +72,7 @@ body {
 	
 	&:first-child {
 		margin: 12px 10px 0 0;
-	}
-	
+	}	
 }
 
 #lede {
@@ -72,8 +80,57 @@ body {
 	color: $white;
 	font-size: 40px;
 	position: relative;
-	font-family: 'PT Sans', 'Helvetica', sans-serif;
+	font-family: $font-pt-sans;
 	text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+#nav {
+	background: $light-grey url('../21_42.png') repeat 0 0;
+	width: 100%;
+	border-bottom: 1px solid #212121;
+	$emheight: 2.285714em;	
+		
+	ul {
+		margin: 0;
+		padding-left: $standard-padding;
+		width: 100%;	
+		height: $emheight;
+		font-family: $font-pt-sans;
+		
+		li {
+			display: inline-block;
+			height: 100%;
+			line-height: $emheight;
+			margin-right: $standard-padding;
+			margin-bottom: 0;
+			padding: 0;
+			font-size: 1.142857em; /* 16 / 14 */
+			a {
+				color: $white; /* $lapis-blue; */
+				text-decoration: none;
+			}
+		}
+	}	
+}
+
+#content {
+	border: 1px solid red;
+	background-color: $white;
+}
+/*
+.shadow {
+	background-color: $white;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#footer {
+	padding-left: $standard-padding;
+	padding-right: $standard-padding;
+	color: $white;
+	a {
+		color: $white;
+	}
+		
 }
 
 /* media queries 
@@ -94,7 +151,6 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 
 @media only screen and (min-width : 320px) and (max-width : 480px) and (orientation: landscape) {
 	#social {
-		display: block;
 		li {
 			height: 32px;
 			width: 32px;
@@ -103,7 +159,7 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 			a {
 				display: block;
 				height: 32px;
-				background-image: url(../icons/sprites-32.png);
+				background-image: url('../icons/sprites-32.png');
 			}
 	
 			a.twitter {

@@ -4,13 +4,18 @@
 body {
   width: 100%;
   margin: 0;
-  background-color: white; }
+  background-color: white;
+  font-size: 14px;
+  background: #d6d6d6 url("../21_42.png") repeat 0 0; }
 
 #header {
   width: 100%;
   height: 64px;
-  background-color: #001E57;
+  background-color: #001e57;
   padding: 0 20px; }
+  #header a {
+    text-decoration: none;
+    color: white; }
 
 #header-wrap {
   /* Override in media queries */
@@ -30,7 +35,7 @@ body {
     #social li a {
       display: block;
       height: 40px;
-      background-image: url(../icons/sprites-40.png); }
+      background-image: url("../icons/sprites-40.png"); }
     #social li a.twitter {
       background-position: 120px 0px; }
     #social li a.github {
@@ -43,8 +48,52 @@ body {
   color: white;
   font-size: 40px;
   position: relative;
-  font-family: 'PT Sans', 'Helvetica', sans-serif;
+  font-family: "PT Sans", "Helvetica", sans-serif;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); }
+
+#nav {
+  background: #d6d6d6 url("../21_42.png") repeat 0 0;
+  width: 100%;
+  border-bottom: 1px solid #212121; }
+  #nav ul {
+    margin: 0;
+    padding-left: 20px;
+    width: 100%;
+    height: 2.28571em;
+    font-family: "PT Sans", "Helvetica", sans-serif; }
+    #nav ul li {
+      display: inline-block;
+      height: 100%;
+      line-height: 2.28571em;
+      margin-right: 20px;
+      margin-bottom: 0;
+      padding: 0;
+      font-size: 1.142857em;
+      /* 16 / 14 */ }
+      #nav ul li a {
+        color: white;
+        /* $lapis-blue; */
+        text-decoration: none; }
+
+#content {
+  border: 1px solid red;
+  background-color: white; }
+
+/*
+.shadow {
+	background-color: $white;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#footer {
+	padding-left: $standard-padding;
+	padding-right: $standard-padding;
+	color: $white;
+	a {
+		color: $white;
+	}
+		
+}
 
 /* media queries 
 http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
@@ -57,21 +106,19 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
   #social {
     display: none; } }
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
-  #social {
-    display: block; }
-    #social li {
+  #social li {
+    height: 32px;
+    width: 32px;
+    margin-top: 16px;
+    margin-right: 12px; }
+    #social li a {
+      display: block;
       height: 32px;
-      width: 32px;
-      margin-top: 16px;
-      margin-right: 12px; }
-      #social li a {
-        display: block;
-        height: 32px;
-        background-image: url(../icons/sprites-32.png); }
-      #social li a.twitter {
-        background-position: 96px 0px; }
-      #social li a.github {
-        background-position: 32px 0px; } }
+      background-image: url("../icons/sprites-32.png"); }
+    #social li a.twitter {
+      background-position: 96px 0px; }
+    #social li a.github {
+      background-position: 32px 0px; } }
 /* OOOLLLLD */
 	/*
 body {
