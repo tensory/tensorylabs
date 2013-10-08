@@ -2,6 +2,7 @@
 $white: #FFFFFF;
 $light-grey: #D6D6D6;
 $lapis-blue: #001E57;
+$dark-grey: #212121;
 	
 $satan: #666;
 $palest: #FBFBFB;
@@ -10,24 +11,27 @@ $unrealfoodpills: #FA6900;
 
 /* Dimensions */
 $header-height: 64px;
-$standard-padding: 20px;
+$standard-padding: 12px;
 
 /* Type */
 $font-pt-sans: 'PT Sans', 'Helvetica', sans-serif;
+
+h2 {
+	font-family: $font-pt-sans;
+	color: $dark-grey;
+}
 
 body {
 	width: 100%;
 	margin: 0;
 	background-color: $white;
 	font-size: 14px;
-	background: $light-grey url('../21_42.png') repeat 0 0;
 }
 
 #header {
 	width: 100%;
 	height: $header-height;
 	background-color: $lapis-blue;
-	padding: 0 $standard-padding;
 	
 	a {
 		text-decoration: none;
@@ -39,7 +43,7 @@ body {
 	/* Override in media queries */
 	position: relative;
 }
-
+/*
 #social {
 	position: absolute;
 	right: $standard-padding;
@@ -74,26 +78,23 @@ body {
 		margin: 12px 10px 0 0;
 	}	
 }
-
+*/
 #lede {
 	line-height: $header-height;
 	color: $white;
 	font-size: 40px;
 	position: relative;
+	left: $standard-padding;
 	font-family: $font-pt-sans;
 	text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 #nav {
-	background: $light-grey url('../21_42.png') repeat 0 0;
-	width: 100%;
-	border-bottom: 1px solid #212121;
 	$emheight: 2.285714em;	
-		
+	background: $light-grey url('../21_42.png') repeat 0 0;	
 	ul {
 		margin: 0;
 		padding-left: $standard-padding;
-		width: 100%;	
 		height: $emheight;
 		font-family: $font-pt-sans;
 		
@@ -105,34 +106,68 @@ body {
 			margin-bottom: 0;
 			padding: 0;
 			font-size: 1.142857em; /* 16 / 14 */
+			/* 
 			a {
-				color: $white; /* $lapis-blue; */
+				color: $white;
 				text-decoration: none;
 			}
+			*/
 		}
+		
 	}	
+	
 }
 
 #content {
-	border: 1px solid red;
+	width: 100%;
+	border-top: 1px solid $white;
 	background-color: $white;
+	
+	div.wrap {
+		padding: 0 $standard-padding;
+	}
 }
 /*
 .shadow {
 	background-color: $white;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
+*/
+
+#content-wrapper {
+	position: relative;
+}
 
 #footer {
 	padding-left: $standard-padding;
 	padding-right: $standard-padding;
-	color: $white;
-	a {
-		color: $white;
-	}
-		
+	position: absolute;
+	bottom: 0;
+	border: 1px solid red;		
 }
 
+/* Projects */
+h2.project-type {
+	color: $satan;
+	font-weight: normal;
+	font-size: 1em; /* 14 */ 
+	margin: 0.571428em 0 0.5em 0; /* 8 / 14 */
+	border-bottom: 1px solid $light-grey;
+}
+
+div.project {
+	
+	table.previews {
+		width: 100%;
+		
+		td img {
+			width: 100%;
+			height: auto;
+		} 
+	}
+}
+
+ 
 /* media queries 
 http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 */
@@ -146,6 +181,14 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 @media only screen and (min-width : 320px) and (max-width : 480px) and (orientation: portrait) {
 	#social {
 		display: none;
+	}
+	
+	div.project {
+		table.previews {
+			td {
+				border: 1px dotted blue;
+			} 
+		}
 	}
 }
 
@@ -171,6 +214,11 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 			}		
 		}
 	}
+	
+	#footer {
+		position: relative;
+	}
+	
 }
 
 

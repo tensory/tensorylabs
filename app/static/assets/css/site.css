@@ -1,18 +1,20 @@
 /* Colors */
 /* Dimensions */
 /* Type */
+h2 {
+  font-family: "PT Sans", "Helvetica", sans-serif;
+  color: #212121; }
+
 body {
   width: 100%;
   margin: 0;
   background-color: white;
-  font-size: 14px;
-  background: #d6d6d6 url("../21_42.png") repeat 0 0; }
+  font-size: 14px; }
 
 #header {
   width: 100%;
   height: 64px;
-  background-color: #001e57;
-  padding: 0 20px; }
+  background-color: #001e57; }
   #header a {
     text-decoration: none;
     color: white; }
@@ -21,79 +23,112 @@ body {
   /* Override in media queries */
   position: relative; }
 
+/*
 #social {
-  position: absolute;
-  right: 20px;
-  margin: 0;
-  top: 0;
-  height: 64px; }
-  #social li {
-    display: inline-block;
-    padding: 0;
-    width: 40px;
-    margin: 12px 16px 0 0; }
-    #social li a {
-      display: block;
-      height: 40px;
-      background-image: url("../icons/sprites-40.png"); }
-    #social li a.twitter {
-      background-position: 120px 0px; }
-    #social li a.github {
-      background-position: 40px 0px; }
-  #social:first-child {
-    margin: 12px 10px 0 0; }
-
+	position: absolute;
+	right: $standard-padding;
+	margin: 0;
+	top: 0;
+	height: $header-height;
+	
+	
+	li {
+		display: inline-block;
+		padding: 0;
+		width: 40px;
+		margin: 12px 16px 0 0;
+		
+		a {
+			display: block;
+			height: 40px;
+			background-image: url('../icons/sprites-40.png');
+		}
+		
+		a.twitter {
+			background-position: 120px 0px;
+		}
+		
+		a.github {
+			background-position: 40px 0px;
+		}
+		
+	}
+	
+	&:first-child {
+		margin: 12px 10px 0 0;
+	}	
+}
+*/
 #lede {
   line-height: 64px;
   color: white;
   font-size: 40px;
   position: relative;
+  left: 12px;
   font-family: "PT Sans", "Helvetica", sans-serif;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); }
 
 #nav {
-  background: #d6d6d6 url("../21_42.png") repeat 0 0;
-  width: 100%;
-  border-bottom: 1px solid #212121; }
+  background: #d6d6d6 url("../21_42.png") repeat 0 0; }
   #nav ul {
     margin: 0;
-    padding-left: 20px;
-    width: 100%;
+    padding-left: 12px;
     height: 2.28571em;
     font-family: "PT Sans", "Helvetica", sans-serif; }
     #nav ul li {
       display: inline-block;
       height: 100%;
       line-height: 2.28571em;
-      margin-right: 20px;
+      margin-right: 12px;
       margin-bottom: 0;
       padding: 0;
       font-size: 1.142857em;
-      /* 16 / 14 */ }
-      #nav ul li a {
-        color: white;
-        /* $lapis-blue; */
-        text-decoration: none; }
+      /* 16 / 14 */
+      /* 
+      a {
+      	color: $white;
+      	text-decoration: none;
+      }
+      */ }
 
 #content {
-  border: 1px solid red;
+  width: 100%;
+  border-top: 1px solid white;
   background-color: white; }
+  #content div.wrap {
+    padding: 0 12px; }
 
 /*
 .shadow {
 	background-color: $white;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
+*/
+#content-wrapper {
+  position: relative; }
 
 #footer {
-	padding-left: $standard-padding;
-	padding-right: $standard-padding;
-	color: $white;
-	a {
-		color: $white;
-	}
-		
-}
+  padding-left: 12px;
+  padding-right: 12px;
+  position: absolute;
+  bottom: 0;
+  border: 1px solid red; }
+
+/* Projects */
+h2.project-type {
+  color: #666666;
+  font-weight: normal;
+  font-size: 1em;
+  /* 14 */
+  margin: 0.571428em 0 0.5em 0;
+  /* 8 / 14 */
+  border-bottom: 1px solid #d6d6d6; }
+
+div.project table.previews {
+  width: 100%; }
+  div.project table.previews td img {
+    width: 100%;
+    height: auto; }
 
 /* media queries 
 http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
@@ -104,7 +139,10 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
     font-size: 32px; } }
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
   #social {
-    display: none; } }
+    display: none; }
+
+  div.project table.previews td {
+    border: 1px dotted blue; } }
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
   #social li {
     height: 32px;
@@ -118,7 +156,10 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
     #social li a.twitter {
       background-position: 96px 0px; }
     #social li a.github {
-      background-position: 32px 0px; } }
+      background-position: 32px 0px; }
+
+  #footer {
+    position: relative; } }
 /* OOOLLLLD */
 	/*
 body {

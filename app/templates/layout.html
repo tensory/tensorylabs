@@ -3,36 +3,44 @@
 <head>
 	<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css') }}" media="all" />
-	<link href="http://fonts.googleapis.com/css?family=Asap:100,400,700" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans|Droid+Sans" rel="stylesheet" type="text/css">
 	<link href="{{ url_for('static', filename='assets/css/site.css') }}" rel="stylesheet type="text/css">
 </head>
 <body>
-		<header>
-			<div id="header">
-				<span id="lede">
-				ari lacenski <span style="opacity: 0.5">builds&nbsp;software &&nbsp;makes&nbsp;magic</span>
+	<header>
+		<div id="header">
+			<div class="wrap">
+				<a href="/"><span id="lede" title="ari lacenski">ari lacenski</span></a>
 				<ul id="social">
 					<li><a href="http://www.twitter.com/tensory" class="twitter" target="_blank"></a></li>
 					<li><a href="http://www.github.com/tensory" class="github" target="_blank"></a></li>
 					<li><a href="mailto:alacenski@gmail.com" class="contact"></a></li>	
 				</ul>
 			</div>
-		</header>	
-	<div id="wrap">
+		</div>
+	</header>	
 	<nav>
-		<ul id="nav">
-			<li><a href="/projects" {% if current == 'projects' %}class="current"{% endif %}>Projects</a></li>
-			<li><a href="/" {% if current == 'about' %}class="current"{% endif %}>About</a></li>
-		</ul>
+		<div id="nav">
+			<div class="wrap">
+			<ul>
+				<li><a href="/projects" {% if current == 'projects' %}class="current"{% endif %}>Projects</a></li>
+				<li><a href="/" {% if current == 'about' %}class="current"{% endif %}>About</a></li>
+			</ul>
+		</div>
 	</nav>
-	{% block content %}
-	{% endblock %}
+	<div class="shadow">
+		<div class="wrap">
+			<div id="content">
+			{% block content %}
+			{% endblock %}
+			</div>
+		</div>
 	</div>
-	<div id="colophon">
-		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC BY-SA</a> 2012, Ari Lacenski</p>
-		<p>Made with <a href="http://icomoon.io/">IcoMoon</a> | <a href="http://fancybox.net/">Fancybox2</a> | <a href="http://sass-lang.com/">SCSS</a> | <a href="http://flask.pocoo.org/">Flask</a></p>
-	</div>
+
+		<div id="footer">
+			<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC BY-SA</a> 2012, Ari Lacenski</p>
+			<p>Made with <a href="http://icomoon.io/">IcoMoon</a> | <a href="http://fancybox.net/">Fancybox2</a> | <a href="http://sass-lang.com/">SCSS</a> | <a href="http://flask.pocoo.org/">Flask</a></p>
+		</div>
 	
 	{% block scripts %}
 	{% endblock %}
