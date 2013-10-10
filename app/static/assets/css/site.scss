@@ -3,22 +3,33 @@ $white: #FFFFFF;
 $light-grey: #D6D6D6;
 $lapis-blue: #001E57;
 $dark-grey: #212121;
+$unrealfoodpills: #FA6900;
 	
 $satan: #666;
 $palest: #FBFBFB;
 $paprikash: #FA560A;
-$unrealfoodpills: #FA6900;
+
 
 /* Dimensions */
 $header-height: 64px;
 $standard-padding: 12px;
+$em16d14: 1.142857em; /* 16 / 14 */
+
+html, body {
+	height: 100%;
+}
 
 /* Type */
 $font-pt-sans: 'PT Sans', 'Helvetica', sans-serif;
+$font-pt-sans-narrow: 'PT Sans Narrow', 'Helvetica', sans-serif;
 
 h2 {
 	font-family: $font-pt-sans;
 	color: $dark-grey;
+}
+
+a {
+	color: $unrealfoodpills;
 }
 
 body {
@@ -100,29 +111,30 @@ body {
 		
 		li {
 			display: inline-block;
-			height: 100%;
+			height: $emheight;
 			line-height: $emheight;
 			margin-right: $standard-padding;
 			margin-bottom: 0;
+			margin-top: -1px;
 			padding: 0;
-			font-size: 1.142857em; /* 16 / 14 */
-			/* 
+			font-size: $em16d14;
+			
 			a {
 				color: $white;
 				text-decoration: none;
 			}
-			*/
+			
 		}
 		
 	}	
-	
 }
 
 #content {
 	width: 100%;
 	border-top: 1px solid $white;
 	background-color: $white;
-	
+	margin: 0 auto -2em;	
+
 	div.wrap {
 		padding: 0 $standard-padding;
 	}
@@ -138,32 +150,90 @@ body {
 	position: relative;
 }
 
+#footer, div.push {
+	height: 2em;
+}
+
 #footer {
+	display: none;
 	padding-left: $standard-padding;
 	padding-right: $standard-padding;
-	position: absolute;
-	bottom: 0;
 	border: 1px solid red;		
 }
 
 /* Projects */
 h2.project-type {
-	color: $satan;
-	font-weight: normal;
+	font-family: $font-pt-sans-narrow;
+	text-transform: uppercase;
+	color: #999;
 	font-size: 1em; /* 14 */ 
 	margin: 0.571428em 0 0.5em 0; /* 8 / 14 */
 	border-bottom: 1px solid $light-grey;
 }
 
 div.project {
+	$sixof14: 0.428571em; /* 6 / 14 */
+	h3 {
+		font-family: 'Georgia', 'Times', serif;
+		margin-bottom: 2px;
+		margin-top: $sixof14;
+		padding: 0;
+	}
+	
+	p {
+		margin-top: 0.375em;
+		font-family: $font-pt-sans;
+		line-height: 1.2em;
+		padding-right: 5px;
+	}
+	
+	p:last-of-type {
+		margin-bottom: $sixof14;
+	}
 	
 	table.previews {
 		width: 100%;
+		td {
+			padding: 0 3px;
+		}
 		
+		td:first-of-type {
+			padding-left: 0;
+			padding-right: 6px;
+		}
+		
+		td:last-of-type {
+			padding-left: 6px;
+			padding-right: 0;
+		}
+				
 		td img {
+			display: inline-block;
 			width: 100%;
 			height: auto;
+			padding: 0;
 		} 
+	}
+	
+	.extlink-wrap {
+		$height: 20px;
+		position: relative;
+		height: $height;
+		margin-bottom: 1em;
+			a.extlink {
+			font-family: $font-pt-sans;
+			color: $satan;
+			position: absolute; 
+			right: 0;
+			text-decoration: none;
+			text-align: right;
+			background-image: url('../icons/arrow-right-16.png');
+			background-position: right;
+			height: $height;
+			line-height: $height;
+			background-repeat: no-repeat;
+			padding-right: $height;
+		}		
 	}
 }
 
@@ -181,14 +251,6 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 @media only screen and (min-width : 320px) and (max-width : 480px) and (orientation: portrait) {
 	#social {
 		display: none;
-	}
-	
-	div.project {
-		table.previews {
-			td {
-				border: 1px dotted blue;
-			} 
-		}
 	}
 }
 
@@ -218,7 +280,40 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 	#footer {
 		position: relative;
 	}
+}
+
+@media only screen and (min-width : 320px) and (max-width : 640px) and (orientation: landscape) {	
+	h2.project-type {
+		font-size: $em16d14;
+	}
+
+}
+
+
+@media only screen and (min-width : 961px) {
+	#lede {
+		left: 0;
+	}
 	
+	#nav ul {
+		padding-left: 0;
+	}
+		
+	.wrap {
+		margin: 0 auto;
+		width: 960px;
+	}
+	
+	#content {
+		div.wrap {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	
+	table.previews {
+		display: none;
+	}
 }
 
 

@@ -1,9 +1,16 @@
 /* Colors */
 /* Dimensions */
+/* 16 / 14 */
+html, body {
+  height: 100%; }
+
 /* Type */
 h2 {
   font-family: "PT Sans", "Helvetica", sans-serif;
   color: #212121; }
+
+a {
+  color: #fa6900; }
 
 body {
   width: 100%;
@@ -77,24 +84,22 @@ body {
     font-family: "PT Sans", "Helvetica", sans-serif; }
     #nav ul li {
       display: inline-block;
-      height: 100%;
+      height: 2.28571em;
       line-height: 2.28571em;
       margin-right: 12px;
       margin-bottom: 0;
+      margin-top: -1px;
       padding: 0;
-      font-size: 1.142857em;
-      /* 16 / 14 */
-      /* 
-      a {
-      	color: $white;
-      	text-decoration: none;
-      }
-      */ }
+      font-size: 1.14286em; }
+      #nav ul li a {
+        color: white;
+        text-decoration: none; }
 
 #content {
   width: 100%;
   border-top: 1px solid white;
-  background-color: white; }
+  background-color: white;
+  margin: 0 auto -2em; }
   #content div.wrap {
     padding: 0 12px; }
 
@@ -107,28 +112,72 @@ body {
 #content-wrapper {
   position: relative; }
 
+#footer, div.push {
+  height: 2em; }
+
 #footer {
+  display: none;
   padding-left: 12px;
   padding-right: 12px;
-  position: absolute;
-  bottom: 0;
   border: 1px solid red; }
 
 /* Projects */
 h2.project-type {
-  color: #666666;
-  font-weight: normal;
+  font-family: "PT Sans Narrow", "Helvetica", sans-serif;
+  text-transform: uppercase;
+  color: #999;
   font-size: 1em;
   /* 14 */
   margin: 0.571428em 0 0.5em 0;
   /* 8 / 14 */
   border-bottom: 1px solid #d6d6d6; }
 
-div.project table.previews {
-  width: 100%; }
-  div.project table.previews td img {
-    width: 100%;
-    height: auto; }
+div.project {
+  /* 6 / 14 */ }
+  div.project h3 {
+    font-family: 'Georgia', 'Times', serif;
+    margin-bottom: 2px;
+    margin-top: 0.42857em;
+    padding: 0; }
+  div.project p {
+    margin-top: 0.375em;
+    font-family: "PT Sans", "Helvetica", sans-serif;
+    line-height: 1.2em;
+    padding-right: 5px; }
+  div.project p:last-of-type {
+    margin-bottom: 0.42857em; }
+  div.project table.previews {
+    width: 100%; }
+    div.project table.previews td {
+      padding: 0 3px; }
+    div.project table.previews td:first-of-type {
+      padding-left: 0;
+      padding-right: 6px; }
+    div.project table.previews td:last-of-type {
+      padding-left: 6px;
+      padding-right: 0; }
+    div.project table.previews td img {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      padding: 0; }
+  div.project .extlink-wrap {
+    position: relative;
+    height: 20px;
+    margin-bottom: 1em; }
+    div.project .extlink-wrap a.extlink {
+      font-family: "PT Sans", "Helvetica", sans-serif;
+      color: #666666;
+      position: absolute;
+      right: 0;
+      text-decoration: none;
+      text-align: right;
+      background-image: url("../icons/arrow-right-16.png");
+      background-position: right;
+      height: 20px;
+      line-height: 20px;
+      background-repeat: no-repeat;
+      padding-right: 20px; }
 
 /* media queries 
 http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
@@ -139,10 +188,7 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
     font-size: 32px; } }
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
   #social {
-    display: none; }
-
-  div.project table.previews td {
-    border: 1px dotted blue; } }
+    display: none; } }
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
   #social li {
     height: 32px;
@@ -160,6 +206,26 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 
   #footer {
     position: relative; } }
+@media only screen and (min-width: 320px) and (max-width: 640px) and (orientation: landscape) {
+  h2.project-type {
+    font-size: 1.14286em; } }
+@media only screen and (min-width: 961px) {
+  #lede {
+    left: 0; }
+
+  #nav ul {
+    padding-left: 0; }
+
+  .wrap {
+    margin: 0 auto;
+    width: 960px; }
+
+  #content div.wrap {
+    padding-left: 0;
+    padding-right: 0; }
+
+  table.previews {
+    display: none; } }
 /* OOOLLLLD */
 	/*
 body {
