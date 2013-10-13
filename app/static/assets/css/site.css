@@ -73,6 +73,7 @@ body {
     margin: 12px 10px 0 0; }
 
 #lede {
+  text-transform: lowercase;
   line-height: 64px;
   color: white;
   font-size: 40px;
