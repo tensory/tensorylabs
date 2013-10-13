@@ -4,6 +4,7 @@ $light-grey: #D6D6D6;
 $lapis-blue: #001E57;
 $dark-grey: #212121;
 $unrealfoodpills: #FA6900;
+$holo-blue: #008AC5;
 	
 $satan: #666;
 $palest: #FBFBFB;
@@ -13,7 +14,10 @@ $paprikash: #FA560A;
 /* Dimensions */
 $header-height: 64px;
 $standard-padding: 12px;
+$double-standard-padding: 24px;
 $em16d14: 1.142857em; /* 16 / 14 */
+$em12of14: 0.857142em; /* 12 / 14 */
+$em6of14: 0.428571em; /* 6 / 14 */
 
 html, body {
 	height: 100%;
@@ -125,8 +129,12 @@ body {
 			}
 			
 		}
-		
-	}	
+	}
+	
+	.current {
+		padding-bottom: 6px;
+		border-bottom: 5px solid $holo-blue;
+	}
 }
 
 #content {
@@ -173,13 +181,13 @@ h2.project-type {
 
 div.project {
 	margin: 1.2em 0 2em;
-	$sixof14: 0.428571em; /* 6 / 14 */
+	
 	h3 {
 		font-family: 'Georgia', 'Times', serif;
 		margin-bottom: 2px;
-		margin-top: $sixof14;
+		margin-top: $em6of14;
 		padding: 0;
-		color: #008AC5;
+		color: $holo-blue;
 	}
 	
 	p {
@@ -190,7 +198,7 @@ div.project {
 	}
 	
 	p:last-of-type {
-		margin-bottom: $sixof14;
+		margin-bottom: $em6of14;
 	}
 	
 	table.previews {
@@ -216,27 +224,27 @@ div.project {
 			padding: 0;
 		} 
 	}
-	
-	.extlink-wrap {
-		$height: 20px;
-		position: relative;
+}
+
+.extlink-wrap {
+	$height: 20px;
+	position: relative;
+	height: $height;
+	margin-bottom: 1em;
+		a.extlink {
+		font-family: $font-pt-sans;
+		color: $satan;
+		position: absolute; 
+		right: 0;
+		text-decoration: none;
+		text-align: right;
+		background-image: url('../icons/arrow-right-16.png');
+		background-position: right;
 		height: $height;
-		margin-bottom: 1em;
-			a.extlink {
-			font-family: $font-pt-sans;
-			color: $satan;
-			position: absolute; 
-			right: 0;
-			text-decoration: none;
-			text-align: right;
-			background-image: url('../icons/arrow-right-16.png');
-			background-position: right;
-			height: $height;
-			line-height: $height;
-			background-repeat: no-repeat;
-			padding-right: $height;
-		}		
-	}
+		line-height: $height;
+		background-repeat: no-repeat;
+		padding-right: $height;
+	}		
 }
 
 
@@ -431,6 +439,53 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 			padding-right: 0;
 		}
 	}	
+}
+
+/* JS and simpler projects */
+table.js-projects {
+	border-collapse: collapse;
+	td {
+		padding-bottom: 2em;
+	}
+	td.thumb {
+		img {
+			display: block;
+			border: 1px solid $light-grey;
+			width: 140px;
+		}
+	}
+	
+	td.description {
+		vertical-align: top;
+		padding: 0;
+		padding-left: 18px;
+		font-family: $font-pt-sans;
+		
+		h3 {
+			font-family: 'Georgia', 'Times', serif;
+			margin-bottom: 2px;
+			margin-top: $em6of14;
+			padding: 0;
+			color: $holo-blue;
+			
+			.subtitle {
+				color: #000;
+				font-weight: normal;
+				display: block;
+				font-size: $em12of14;
+				font-family: $font-pt-sans;
+			}
+		}
+		
+		div.extlink-wrap {
+			a.extlink {
+				width: 42px;
+				left: 0;
+				text-align: left;
+			}
+		}
+		
+	}
 }
 
 
