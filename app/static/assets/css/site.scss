@@ -54,7 +54,7 @@ body {
 	/* Override in media queries */
 	position: relative;
 }
-/*
+
 #social {
 	position: absolute;
 	right: $standard-padding;
@@ -89,7 +89,7 @@ body {
 		margin: 12px 10px 0 0;
 	}	
 }
-*/
+
 #lede {
 	line-height: $header-height;
 	color: $white;
@@ -167,11 +167,12 @@ h2.project-type {
 	text-transform: uppercase;
 	color: #999;
 	font-size: 1em; /* 14 */ 
-	margin: 0.571428em 0 0.5em 0; /* 8 / 14 */
+	margin: 0.571428em 0 0.7em 0; /* 8 / 14 */
 	border-bottom: 1px solid $light-grey;
 }
 
 div.project {
+	margin: 1.2em 0 2em;
 	$sixof14: 0.428571em; /* 6 / 14 */
 	h3 {
 		font-family: 'Georgia', 'Times', serif;
@@ -183,7 +184,7 @@ div.project {
 	p {
 		margin-top: 0.375em;
 		font-family: $font-pt-sans;
-		line-height: 1.2em;
+		line-height: 1.375em;
 		padding-right: 5px;
 	}
 	
@@ -237,7 +238,15 @@ div.project {
 	}
 }
 
- 
+
+
+div.clear {
+	clear: both;
+	hr {
+		display: none;
+	}
+}
+
 /* media queries 
 http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 */
@@ -286,17 +295,117 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 	h2.project-type {
 		font-size: $em16d14;
 	}
-
 }
 
+@media only screen and (max-width : 640px) {
+	table.previews-full {
+		display: none;
+	}
+}
+@media only screen and (min-width : 640px) {
+	div.project {
+		min-width: 641px;
+		width: 100%;
+		clear: both;
+		position: relative;
+		
+		table {
+			margin-bottom: 3em;
+		}
+			
+		div.desc {
+			margin-right: 480px;
+			padding-right: $standard-padding;
+			
+			div.extlink-wrap {
+				margin-right: $standard-padding;
+			}
+		}
+		
+		&.even {
+			table {
+				float: left;
+			}
+			div.desc {
+				margin-left: 480px;
+				margin-right: 0;
+				padding-right: 0;
+				padding-left: 24px;
+				
+				div.extlink-wrap {
+					margin-right: 0;
+					margin-left: $standard-padding;
+				}
+			}
+		}
+	
+	}
+	
+	table.previews {
+		display: none;	
+	}
+	
+	
+	table.previews-full {
+		max-width: 480px;
+		float: right;
+		background-color: #000;
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+		border-radius: 5px;
+		border-spacing: 4px;
+		
+		td {
+			max-width: 154px;
+			img {
+				max-width: 100%;
+				display: block;
+			}
 
-@media only screen and (min-width : 961px) {
+		}
+	}
+	
+}
+
+@media only screen and (min-width: 640px) and (max-width: 780px) {
+	div.project {
+		table.previews-full {
+			img {
+				max-width: 120px; 
+			}
+		}
+		$transitional-margin: 375px;
+		div.desc {
+			margin-right: $transitional-margin;
+		}
+		
+		&.even {
+			div.desc {
+				margin-left: $transitional-margin;
+			}
+		}
+	}	
+}
+
+@media only screen and (min-width : 960px) {
 	#lede {
 		left: 0;
 	}
 	
-	#nav ul {
-		padding-left: 0;
+	#header {
+		div.wrap {
+			position: relative;
+		}
+	}
+	
+	#social {
+		position: absolute;
+		right: 0;
+	} 
+	
+	#nav {
+		ul {
+			padding-left: 0;
+		}
 	}
 		
 	.wrap {
@@ -309,11 +418,7 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 			padding-left: 0;
 			padding-right: 0;
 		}
-	}
-	
-	table.previews {
-		display: none;
-	}
+	}	
 }
 
 
