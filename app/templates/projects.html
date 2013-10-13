@@ -1,6 +1,58 @@
 {% extends "layout.html" %}
-
+{% set img_path = 'assets/images/' %}
 {% block content %}
+<h2 class="project-type">Android</h2>
+<div class="project">
+	<table class="previews">
+		<tr>
+			<td><img src="{{ url_for('static', filename=img_path + 'airport_time/previews/landing.png') }}"/></td>
+			<td><img src="{{ url_for('static', filename=img_path + 'airport_time/previews/search.png') }}"/></td>
+			<td><img src="{{ url_for('static', filename=img_path + 'airport_time/previews/status.png') }}"/></td>			
+		</tr>
+	</table>
+	<table class="previews-full">
+		<tr>
+			<td><img src="{{ url_for('static', filename=img_path + 'airport_time/landing.png') }}"/></td>
+			<td><img src="{{ url_for('static', filename=img_path + 'airport_time/search.png') }}"/></td>
+			<td><img src="{{ url_for('static', filename=img_path + 'airport_time/status.png') }}"/></td>			
+		</tr>
+	</table>
+	<div class="desc">
+		<h3>Airport Time</h3>
+	<p>Airport Time helps you plan your next trip to the airport. You can search for any international airport in the US.</p><p>Using your current location, it provides driving and public-transit directions via Google Maps, with the amount of time it will take to get there. Airport delay info and current weather are included.</p><p>You can also save favorite airports and keep directions in the background for your last searched destination.</p>
+		<div class="extlink-wrap">
+			<a class="extlink" href="#">Github</a>
+		</div>
+	</div>
+</div>
+
+<div class="project even">
+	<table class="previews">
+		<tr>
+			<td><img src="{{ url_for('static', filename=img_path + 'icbint/previews/logo.png') }}"/></td>
+			<td><img src="{{ url_for('static', filename=img_path + 'icbint/previews/oauth.png') }}"/></td>
+			<td><img src="{{ url_for('static', filename=img_path + 'icbint/previews/timeline.png') }}"/></td>			
+		</tr>
+	</table>
+	<table class="previews-full">
+		<tr>
+			<td><img src="{{ url_for('static', filename=img_path + 'icbint/logo.png') }}"/></td>
+			<td><img src="{{ url_for('static', filename=img_path + 'icbint/oauth.png') }}"/></td>
+			<td><img src="{{ url_for('static', filename=img_path + 'icbint/timeline.png') }}"/></td>			
+		</tr>
+	</table>
+	<div class="desc">
+		<h3>I Can't Believe It's Not Twitter</h3>
+		<p>I wrote ICBINT as a class project in the excellent <a href="http://www.thecodepath.com">CodePath</a> Android training course.</p>
+	<p>It's a Twitter client, featuring OAuth authentication, your full timeline, and the major features of the standard Twitter app, including posting, viewing other users' timelines, and browsing your timeline with infinite scroll.</p>
+		<div class="extlink-wrap">
+			<a class="extlink" href="#">Github</a>
+		</div>
+	</div>
+</div>
+
+<div class="clear"><hr/></div>
+<h2 class="project-type">JavaScript</h2>
 <table class="projects">
 	<tbody>
 		<tr>
