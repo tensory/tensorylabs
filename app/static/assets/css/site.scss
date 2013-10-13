@@ -340,6 +340,12 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 	table.previews-full {
 		display: none;
 	}
+	
+	#nav {
+		.current {
+			padding-bottom: 5px;
+		}
+	}
 }
 @media only screen and (min-width : 640px) {
 	div.project {

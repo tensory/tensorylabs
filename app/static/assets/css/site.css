@@ -230,7 +230,10 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
     font-size: 1.14286em; } }
 @media only screen and (max-width: 640px) {
   table.previews-full {
-    display: none; } }
+    display: none; }
+
+  #nav .current {
+    padding-bottom: 5px; } }
 @media only screen and (min-width: 640px) {
   div.project {
     min-width: 641px;
