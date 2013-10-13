@@ -27,6 +27,28 @@ html, body {
 $font-pt-sans: 'PT Sans', 'Helvetica', sans-serif;
 $font-pt-sans-narrow: 'PT Sans Narrow', 'Helvetica', sans-serif;
 
+h2.about {
+	margin-top: 1.5em;
+	margin-bottom: 0.375em;
+	padding: 0;
+}
+
+ul.about {
+	margin-top: 0;
+	padding: 0;
+	
+	li {
+		font-size: $em16d14;
+		list-style-type: none;
+		margin-bottom: 1em;
+	}
+}
+
+p.contact {
+	font-size: $em16d14;
+	font-family: $font-pt-sans;
+}
+
 h2 {
 	font-family: $font-pt-sans;
 	color: $dark-grey;
@@ -41,6 +63,7 @@ body {
 	margin: 0;
 	background-color: $white;
 	font-size: 14px;
+	font-family: $font-pt-sans;
 }
 
 #header {
@@ -135,6 +158,10 @@ body {
 		padding-bottom: 6px;
 		border-bottom: 5px solid $holo-blue;
 	}
+	
+	.current, x:-moz-any-link {		
+		padding-bottom: 5px;
+	}
 }
 
 #content {
@@ -163,10 +190,12 @@ body {
 }
 
 #footer {
-	display: none;
-	padding-left: $standard-padding;
-	padding-right: $standard-padding;
-	border: 1px solid red;		
+	font-family: $font-pt-sans;
+	color: $dark-grey;
+	.wrap {
+		padding: 0 $standard-padding 0.5em;
+		border-top: 1px solid $light-grey;
+	}
 }
 
 /* Projects */
@@ -354,7 +383,6 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 		display: none;	
 	}
 	
-	
 	table.previews-full {
 		max-width: 480px;
 		float: right;
@@ -433,12 +461,12 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 		width: 960px;
 	}
 	
-	#content {
+	#content, #footer {
 		div.wrap {
 			padding-left: 0;
 			padding-right: 0;
 		}
-	}	
+	}
 }
 
 /* JS and simpler projects */

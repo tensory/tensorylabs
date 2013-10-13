@@ -7,6 +7,23 @@ html, body {
   height: 100%; }
 
 /* Type */
+h2.about {
+  margin-top: 1.5em;
+  margin-bottom: 0.375em;
+  padding: 0; }
+
+ul.about {
+  margin-top: 0;
+  padding: 0; }
+  ul.about li {
+    font-size: 1.14286em;
+    list-style-type: none;
+    margin-bottom: 1em; }
+
+p.contact {
+  font-size: 1.14286em;
+  font-family: "PT Sans", "Helvetica", sans-serif; }
+
 h2 {
   font-family: "PT Sans", "Helvetica", sans-serif;
   color: #212121; }
@@ -18,7 +35,8 @@ body {
   width: 100%;
   margin: 0;
   background-color: white;
-  font-size: 14px; }
+  font-size: 14px;
+  font-family: "PT Sans", "Helvetica", sans-serif; }
 
 #header {
   width: 100%;
@@ -85,6 +103,8 @@ body {
   #nav .current {
     padding-bottom: 6px;
     border-bottom: 5px solid #008ac5; }
+  #nav .current, #nav x:-moz-any-link {
+    padding-bottom: 5px; }
 
 #content {
   width: 100%;
@@ -107,10 +127,11 @@ body {
   height: 2em; }
 
 #footer {
-  display: none;
-  padding-left: 12px;
-  padding-right: 12px;
-  border: 1px solid red; }
+  font-family: "PT Sans", "Helvetica", sans-serif;
+  color: #212121; }
+  #footer .wrap {
+    padding: 0 12px 0.5em;
+    border-top: 1px solid #d6d6d6; }
 
 /* Projects */
 h2.project-type {
@@ -282,7 +303,7 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
     margin: 0 auto;
     width: 960px; }
 
-  #content div.wrap {
+  #content div.wrap, #footer div.wrap {
     padding-left: 0;
     padding-right: 0; } }
 /* JS and simpler projects */
