@@ -167,7 +167,7 @@ h2.project-type {
 	text-transform: uppercase;
 	color: #999;
 	font-size: 1em; /* 14 */ 
-	margin: 0.571428em 0 0.7em 0; /* 8 / 14 */
+	margin: 1.375em 0 0.7em 0;
 	border-bottom: 1px solid $light-grey;
 }
 
@@ -179,6 +179,7 @@ div.project {
 		margin-bottom: 2px;
 		margin-top: $sixof14;
 		padding: 0;
+		color: #008AC5;
 	}
 	
 	p {
@@ -363,7 +364,6 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 
 		}
 	}
-	
 }
 
 @media only screen and (min-width: 640px) and (max-width: 780px) {
@@ -386,12 +386,24 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 	}	
 }
 
+@media only screen and (max-width: 960px) {
+	#header {
+		background-image: url('../images/topbar/970x.png');
+		background-position: center top;
+		background-repeat: repeat-x;
+	}
+}
+
 @media only screen and (min-width : 960px) {
 	#lede {
 		left: 0;
 	}
 	
 	#header {
+		background-image: url('../images/topbar/full.png');
+		background-position: center top;
+		background-repeat: repeat-x;
+	
 		div.wrap {
 			position: relative;
 		}
@@ -619,11 +631,10 @@ td.description h3 {
 		font-size: 0.6em;
 	}
 }
+*/
 
 /* Custom styles for Fancybox */
-/*
 #fancybox-title-inside {
 	font-weight: bold;
 	margin-top: 0.1em;
 }
-*/

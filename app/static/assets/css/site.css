@@ -114,8 +114,7 @@ h2.project-type {
   color: #999;
   font-size: 1em;
   /* 14 */
-  margin: 0.571428em 0 0.7em 0;
-  /* 8 / 14 */
+  margin: 1.375em 0 0.7em 0;
   border-bottom: 1px solid #d6d6d6; }
 
 div.project {
@@ -125,7 +124,8 @@ div.project {
     font-family: 'Georgia', 'Times', serif;
     margin-bottom: 2px;
     margin-top: 0.42857em;
-    padding: 0; }
+    padding: 0;
+    color: #008AC5; }
   div.project p {
     margin-top: 0.375em;
     font-family: "PT Sans", "Helvetica", sans-serif;
@@ -250,12 +250,21 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
     margin-right: 375px; }
   div.project.even div.desc {
     margin-left: 375px; } }
+@media only screen and (max-width: 960px) {
+  #header {
+    background-image: url("../images/topbar/970x.png");
+    background-position: center top;
+    background-repeat: repeat-x; } }
 @media only screen and (min-width: 960px) {
   #lede {
     left: 0; }
 
-  #header div.wrap {
-    position: relative; }
+  #header {
+    background-image: url("../images/topbar/full.png");
+    background-position: center top;
+    background-repeat: repeat-x; }
+    #header div.wrap {
+      position: relative; }
 
   #social {
     position: absolute;
@@ -423,7 +432,7 @@ ol {
 	line-height: 0.857142em;
 	/* This works in IE 8 & 9 too */
 /* ... but also 5, 6, 7 */
-/*
+	/*
 	filter: alpha(opacity=70);
 	
 	opacity: 0.7;
@@ -466,11 +475,8 @@ td.description h3 {
 		font-size: 0.6em;
 	}
 }
-
-/* Custom styles for Fancybox */
-/*
-#fancybox-title-inside {
-	font-weight: bold;
-	margin-top: 0.1em;
-}
 */
+/* Custom styles for Fancybox */
+#fancybox-title-inside {
+  font-weight: bold;
+  margin-top: 0.1em; }
