@@ -55,7 +55,7 @@ h2 {
 }
 
 a {
-	color: $unrealfoodpills;
+	color: $paprikash;
 }
 
 body {
@@ -141,7 +141,7 @@ body {
 			display: inline-block;
 			height: $emheight;
 			line-height: $emheight;
-			margin-right: $standard-padding;
+			margin-right: 18px;
 			margin-bottom: 0;
 			margin-top: -1px;
 			padding: 0;
@@ -474,6 +474,7 @@ http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 table.js-projects {
 	border-collapse: collapse;
 	td {
+		vertical-align: top;
 		padding-bottom: 2em;
 	}
 	td.thumb {
@@ -485,7 +486,6 @@ table.js-projects {
 	}
 	
 	td.description {
-		vertical-align: top;
 		padding: 0;
 		padding-left: 18px;
 		font-family: $font-pt-sans;
